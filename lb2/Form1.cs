@@ -18,6 +18,7 @@ namespace lb2
             InitializeComponent();
             label1.Text = "9876tyui";
             some = new University();
+
         }
 
         private void button1_Click(object sender, EventArgs e)
