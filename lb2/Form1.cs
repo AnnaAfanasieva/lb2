@@ -12,18 +12,17 @@ namespace lb2
 {
     public partial class Form1 : Form
     {
-        University some;
+        University khnure;
         public Form1()
         {
             InitializeComponent();
-            label1.Text = "9876tyui";
-            some = new University();
+            khnure = new University();
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            label1.Text = some.a.ToString() ;
+            label1.Text = khnure.faculty.ToString() ;
             
         }
     }
