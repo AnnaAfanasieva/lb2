@@ -29,17 +29,15 @@ namespace lb2
 
         public University(University nameuniversity)
         {
-        faculty=nameuniversity.faculty;
-        laboratory=nameuniversity.laboratory;
-        students=nameuniversity.students;
-        rooms=nameuniversity.rooms;
-        univname=nameuniversity.univname;
-        teachers=nameuniversity.teachers;
-        assistant=nameuniversity.assistant;
+            faculty = nameuniversity.faculty;
+            laboratory = nameuniversity.laboratory;
+            students = nameuniversity.students;
+            rooms = nameuniversity.rooms;
+            univname = nameuniversity.univname;
+            teachers = nameuniversity.teachers;
+            assistant = nameuniversity.assistant;
+        }
     }
 
-        //Вызвать конструктор
-
-
-    }
+        
 }
