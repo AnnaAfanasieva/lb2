@@ -25,7 +25,6 @@ namespace lb2
             this.univname = univname;
             this.teachers = teachers;
             this.assistant = assistant;
-            //comboBox1.Items.AddRange(new string[] { "ХНУРЭ", "ХПИ", "ХАИ", "ХНПУ" });
         }
 
         public University(University nameuniversity)
@@ -37,6 +36,54 @@ namespace lb2
             univname = nameuniversity.univname;
             teachers = nameuniversity.teachers;
             assistant = nameuniversity.assistant;
+        }
+
+        public void addstud ()
+        {
+            students++;
+        }
+
+        public void deletestud ()
+        {
+            students--;
+        }
+
+        public void addlab ()
+        {
+            laboratory++;
+        }
+
+        public void deletelab ()
+        {
+            laboratory--;
+        }
+
+        public void addroom ()
+        {
+            rooms++;
+        }
+        public void deleteroom ()
+        {
+            rooms--;
+        }
+
+        public void addteach ()
+        {
+            teachers++;
+        }
+
+        public void deleteteach ()
+        {
+            teachers--;
+        }
+
+        public void addassis ()
+        {
+            assistant++;
+        }
+        public void deleteassis ()
+        {
+            assistant--;
         }
     }
 

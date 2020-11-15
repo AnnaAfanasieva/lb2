@@ -13,11 +13,7 @@ namespace lb2
     public partial class Form1 : Form
     {
         List<University> universities;
-        //University selectedUniversity;
-      //  University khnure;
-      //  University khpi;
-      //  University khai;
-       // University khnpu;
+
         public Form1()
         {
             InitializeComponent();
@@ -25,7 +21,7 @@ namespace lb2
 
             universities.Add(new University(3, 8, 100, 12, "ХНУРЭ", 9, 7));
 
-            universities.Add(new University(3, 8, 90, 12, "ХПИ", 8, 7));
+            universities.Add(new University(3, 8, 100, 12, "ХПИ", 9, 7));
 
             University khai = new University(new University(3, 8, 100, 12, "ХАИ", 9, 7));
             universities.Add(khai);
@@ -33,14 +29,6 @@ namespace lb2
             University khnpu = new University(khai);
             khnpu.univname = "ХНПУ";
             universities.Add(khnpu);
-
-            // khnure = new University(3, 8, 100, 12, "University", 9, 7);
-            //khnure.univname = "KhNURE";
-            // khpi = new University(khnure);
-            //  khpi.univname = "KhPI";
-            //  universities.Add(khpi);
-            //  khai = new University(khnure);
-            //  khai.univname = "KhAI";
   
             initCombo();
 
@@ -56,27 +44,11 @@ namespace lb2
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-            
-        }
+       
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             //MessageBox.Show("change");
-            //string str = comboBox1.SelectedItem.ToString();
-            //foreach (University univ in universities)
-            //{
-            //    if (str.Equals(univ.univname))
-            //    {
-
-            //        selectedUniversity = univ;
-
-
-            //        break;
-            //    }
-            //}
 
             label8.Text = universities[comboBox1.SelectedIndex].faculty.ToString() ;
             label9.Text = universities[comboBox1.SelectedIndex].laboratory.ToString();
@@ -86,6 +58,66 @@ namespace lb2
             label13.Text = universities[comboBox1.SelectedIndex].teachers.ToString();
             label14.Text = universities[comboBox1.SelectedIndex].assistant.ToString();
 
+        }
+
+        private void addlaboratory_Click(object sender, EventArgs e)
+        {
+            universities[comboBox1.SelectedIndex].addlab();
+            label9.Text = universities[comboBox1.SelectedIndex].laboratory.ToString();
+        }
+
+        private void deletelaboratory_Click(object sender, EventArgs e)
+        {
+            universities[comboBox1.SelectedIndex].deletelab();
+            label9.Text = universities[comboBox1.SelectedIndex].laboratory.ToString();
+        }
+
+        private void addstudent_Click(object sender, EventArgs e)
+        {
+            universities[comboBox1.SelectedIndex].addstud();
+            label10.Text = universities[comboBox1.SelectedIndex].students.ToString();
+        }
+
+        private void deletestudent_Click(object sender, EventArgs e)
+        {
+            universities[comboBox1.SelectedIndex].deletestud();
+            label10.Text = universities[comboBox1.SelectedIndex].students.ToString();
+        }
+
+        private void addroom_Click(object sender, EventArgs e)
+        {
+            universities[comboBox1.SelectedIndex].addroom();
+            label11.Text = universities[comboBox1.SelectedIndex].rooms.ToString();
+        }
+
+        private void deleteroom_Click(object sender, EventArgs e)
+        {
+            universities[comboBox1.SelectedIndex].deleteroom();
+            label11.Text = universities[comboBox1.SelectedIndex].rooms.ToString();
+        }
+
+        private void addteacher_Click(object sender, EventArgs e)
+        {
+            universities[comboBox1.SelectedIndex].addteach();
+            label13.Text = universities[comboBox1.SelectedIndex].teachers.ToString();
+        }
+
+        private void deleteteacher_Click(object sender, EventArgs e)
+        {
+            universities[comboBox1.SelectedIndex].deleteteach();
+            label13.Text = universities[comboBox1.SelectedIndex].teachers.ToString();
+        }
+
+        private void addassistant_Click(object sender, EventArgs e)
+        {
+            universities[comboBox1.SelectedIndex].addassis();
+            label14.Text = universities[comboBox1.SelectedIndex].assistant.ToString();
+        }
+
+        private void deleteassistant_Click(object sender, EventArgs e)
+        {
+            universities[comboBox1.SelectedIndex].deleteassis();
+            label14.Text = universities[comboBox1.SelectedIndex].assistant.ToString();
         }
     }
 }

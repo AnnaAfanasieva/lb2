@@ -44,16 +44,16 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
+            this.addlaboratory = new System.Windows.Forms.Button();
+            this.deletelaboratory = new System.Windows.Forms.Button();
+            this.addstudent = new System.Windows.Forms.Button();
+            this.deletestudent = new System.Windows.Forms.Button();
+            this.addroom = new System.Windows.Forms.Button();
+            this.deleteroom = new System.Windows.Forms.Button();
+            this.addteacher = new System.Windows.Forms.Button();
+            this.deleteteacher = new System.Windows.Forms.Button();
+            this.addassistant = new System.Windows.Forms.Button();
+            this.deleteassistant = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -64,7 +64,6 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "Объединить университеты";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -202,111 +201,121 @@
             this.label14.TabIndex = 15;
             this.label14.Text = "0";
             // 
-            // button2
+            // addlaboratory
             // 
-            this.button2.Location = new System.Drawing.Point(337, 95);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(184, 23);
-            this.button2.TabIndex = 16;
-            this.button2.Text = "Добавить лабораторию";
-            this.button2.UseVisualStyleBackColor = true;
+            this.addlaboratory.Location = new System.Drawing.Point(337, 95);
+            this.addlaboratory.Name = "addlaboratory";
+            this.addlaboratory.Size = new System.Drawing.Size(184, 23);
+            this.addlaboratory.TabIndex = 16;
+            this.addlaboratory.Text = "Добавить лабораторию";
+            this.addlaboratory.UseVisualStyleBackColor = true;
+            this.addlaboratory.Click += new System.EventHandler(this.addlaboratory_Click);
             // 
-            // button3
+            // deletelaboratory
             // 
-            this.button3.Location = new System.Drawing.Point(558, 95);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(190, 23);
-            this.button3.TabIndex = 17;
-            this.button3.Text = "Убрать лабораторию";
-            this.button3.UseVisualStyleBackColor = true;
+            this.deletelaboratory.Location = new System.Drawing.Point(558, 95);
+            this.deletelaboratory.Name = "deletelaboratory";
+            this.deletelaboratory.Size = new System.Drawing.Size(190, 23);
+            this.deletelaboratory.TabIndex = 17;
+            this.deletelaboratory.Text = "Убрать лабораторию";
+            this.deletelaboratory.UseVisualStyleBackColor = true;
+            this.deletelaboratory.Click += new System.EventHandler(this.deletelaboratory_Click);
             // 
-            // button4
+            // addstudent
             // 
-            this.button4.Location = new System.Drawing.Point(337, 141);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(184, 23);
-            this.button4.TabIndex = 18;
-            this.button4.Text = "Зачислить студента";
-            this.button4.UseVisualStyleBackColor = true;
+            this.addstudent.Location = new System.Drawing.Point(337, 141);
+            this.addstudent.Name = "addstudent";
+            this.addstudent.Size = new System.Drawing.Size(184, 23);
+            this.addstudent.TabIndex = 18;
+            this.addstudent.Text = "Зачислить студента";
+            this.addstudent.UseVisualStyleBackColor = true;
+            this.addstudent.Click += new System.EventHandler(this.addstudent_Click);
             // 
-            // button5
+            // deletestudent
             // 
-            this.button5.Location = new System.Drawing.Point(558, 138);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(190, 23);
-            this.button5.TabIndex = 19;
-            this.button5.Text = "Отчислить студента";
-            this.button5.UseVisualStyleBackColor = true;
+            this.deletestudent.Location = new System.Drawing.Point(558, 138);
+            this.deletestudent.Name = "deletestudent";
+            this.deletestudent.Size = new System.Drawing.Size(190, 23);
+            this.deletestudent.TabIndex = 19;
+            this.deletestudent.Text = "Отчислить студента";
+            this.deletestudent.UseVisualStyleBackColor = true;
+            this.deletestudent.Click += new System.EventHandler(this.deletestudent_Click);
             // 
-            // button6
+            // addroom
             // 
-            this.button6.Location = new System.Drawing.Point(337, 180);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(184, 23);
-            this.button6.TabIndex = 20;
-            this.button6.Text = "Добавить аудиторию";
-            this.button6.UseVisualStyleBackColor = true;
+            this.addroom.Location = new System.Drawing.Point(337, 180);
+            this.addroom.Name = "addroom";
+            this.addroom.Size = new System.Drawing.Size(184, 23);
+            this.addroom.TabIndex = 20;
+            this.addroom.Text = "Добавить аудиторию";
+            this.addroom.UseVisualStyleBackColor = true;
+            this.addroom.Click += new System.EventHandler(this.addroom_Click);
             // 
-            // button7
+            // deleteroom
             // 
-            this.button7.Location = new System.Drawing.Point(558, 177);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(190, 23);
-            this.button7.TabIndex = 21;
-            this.button7.Text = "Убрать аудиторию";
-            this.button7.UseVisualStyleBackColor = true;
+            this.deleteroom.Location = new System.Drawing.Point(558, 177);
+            this.deleteroom.Name = "deleteroom";
+            this.deleteroom.Size = new System.Drawing.Size(190, 23);
+            this.deleteroom.TabIndex = 21;
+            this.deleteroom.Text = "Убрать аудиторию";
+            this.deleteroom.UseVisualStyleBackColor = true;
+            this.deleteroom.Click += new System.EventHandler(this.deleteroom_Click);
             // 
-            // button8
+            // addteacher
             // 
-            this.button8.Location = new System.Drawing.Point(337, 254);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(184, 23);
-            this.button8.TabIndex = 22;
-            this.button8.Text = "Нанять преподавателя";
-            this.button8.UseVisualStyleBackColor = true;
+            this.addteacher.Location = new System.Drawing.Point(337, 254);
+            this.addteacher.Name = "addteacher";
+            this.addteacher.Size = new System.Drawing.Size(184, 23);
+            this.addteacher.TabIndex = 22;
+            this.addteacher.Text = "Нанять преподавателя";
+            this.addteacher.UseVisualStyleBackColor = true;
+            this.addteacher.Click += new System.EventHandler(this.addteacher_Click);
             // 
-            // button9
+            // deleteteacher
             // 
-            this.button9.Location = new System.Drawing.Point(558, 254);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(190, 23);
-            this.button9.TabIndex = 23;
-            this.button9.Text = "Уволить преподавателя";
-            this.button9.UseVisualStyleBackColor = true;
+            this.deleteteacher.Location = new System.Drawing.Point(558, 254);
+            this.deleteteacher.Name = "deleteteacher";
+            this.deleteteacher.Size = new System.Drawing.Size(190, 23);
+            this.deleteteacher.TabIndex = 23;
+            this.deleteteacher.Text = "Уволить преподавателя";
+            this.deleteteacher.UseVisualStyleBackColor = true;
+            this.deleteteacher.Click += new System.EventHandler(this.deleteteacher_Click);
             // 
-            // button10
+            // addassistant
             // 
-            this.button10.Location = new System.Drawing.Point(337, 290);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(184, 23);
-            this.button10.TabIndex = 24;
-            this.button10.Text = "Нанять ассистента";
-            this.button10.UseVisualStyleBackColor = true;
+            this.addassistant.Location = new System.Drawing.Point(337, 290);
+            this.addassistant.Name = "addassistant";
+            this.addassistant.Size = new System.Drawing.Size(184, 23);
+            this.addassistant.TabIndex = 24;
+            this.addassistant.Text = "Нанять ассистента";
+            this.addassistant.UseVisualStyleBackColor = true;
+            this.addassistant.Click += new System.EventHandler(this.addassistant_Click);
             // 
-            // button11
+            // deleteassistant
             // 
-            this.button11.Location = new System.Drawing.Point(558, 293);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(190, 23);
-            this.button11.TabIndex = 25;
-            this.button11.Text = "Уволить аcсистента";
-            this.button11.UseVisualStyleBackColor = true;
+            this.deleteassistant.Location = new System.Drawing.Point(558, 293);
+            this.deleteassistant.Name = "deleteassistant";
+            this.deleteassistant.Size = new System.Drawing.Size(190, 23);
+            this.deleteassistant.TabIndex = 25;
+            this.deleteassistant.Text = "Уволить аcсистента";
+            this.deleteassistant.UseVisualStyleBackColor = true;
+            this.deleteassistant.Click += new System.EventHandler(this.deleteassistant_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button11);
-            this.Controls.Add(this.button10);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.deleteassistant);
+            this.Controls.Add(this.addassistant);
+            this.Controls.Add(this.deleteteacher);
+            this.Controls.Add(this.addteacher);
+            this.Controls.Add(this.deleteroom);
+            this.Controls.Add(this.addroom);
+            this.Controls.Add(this.deletestudent);
+            this.Controls.Add(this.addstudent);
+            this.Controls.Add(this.deletelaboratory);
+            this.Controls.Add(this.addlaboratory);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
@@ -348,16 +357,16 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button addlaboratory;
+        private System.Windows.Forms.Button deletelaboratory;
+        private System.Windows.Forms.Button addstudent;
+        private System.Windows.Forms.Button deletestudent;
+        private System.Windows.Forms.Button addroom;
+        private System.Windows.Forms.Button deleteroom;
+        private System.Windows.Forms.Button addteacher;
+        private System.Windows.Forms.Button deleteteacher;
+        private System.Windows.Forms.Button addassistant;
+        private System.Windows.Forms.Button deleteassistant;
     }
 }
 
