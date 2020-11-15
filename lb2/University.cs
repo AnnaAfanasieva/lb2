@@ -40,7 +40,7 @@ namespace lb2
 
         public void addstud ()
         {
-            if (students > 0 && students / teachers < 10)
+            if (students > 0 && ((double)students / teachers) < 10.0)
             {
                 students++;
             }
@@ -48,7 +48,7 @@ namespace lb2
  
         public void deletestud ()
         {
-            if (students>0 && students/teachers<=10)
+            if (students>0 && ( (double) students/teachers)<=10.0)
             {
                 students--;
             }
@@ -89,10 +89,10 @@ namespace lb2
 
         public void deleteteach ()
         {
-            if (teachers>0 && students / teachers < 10)
+            if (teachers>0 && Math.Ceiling((double)students/10)  < teachers)
             {
                 teachers--;
-            }
+            } 
         }
 
         public void addassis ()
@@ -101,12 +101,16 @@ namespace lb2
         }
         public void deleteassis ()
         {
-            if (assistant>0 && rooms / assistant < 2)
+            if (assistant>0 && Math.Ceiling((double) rooms /2.0) < assistant)
             {
                 assistant--;
             }
         }
-
+        public static University operator +(University firstuniv, University seconduniv)
+        {
+            University result = new University(firstuniv.faculty + seconduniv.faculty, firstuniv.laboratory + seconduniv.laboratory, firstuniv.students+seconduniv.students, firstuniv.rooms+seconduniv.rooms, firstuniv.univname+'+'+seconduniv.univname, firstuniv.teachers+seconduniv.teachers, firstuniv.assistant+seconduniv.assistant);
+            return result;
+        }
     }
 
         

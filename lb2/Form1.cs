@@ -49,8 +49,6 @@ namespace lb2
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //MessageBox.Show("change");
-
             label8.Text = universities[comboBox1.SelectedIndex].faculty.ToString() ;
             label9.Text = universities[comboBox1.SelectedIndex].laboratory.ToString();
             label10.Text = universities[comboBox1.SelectedIndex].students.ToString();
@@ -123,9 +121,9 @@ namespace lb2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //universities[1] += universities[2];
-            //universities.Remove(universities[2]);
-            //initCombo();
+            universities[0] += universities[1];
+            universities.Remove(universities[1]);
+            initCombo();
         }
 
         private void Info_Click(object sender, EventArgs e)
