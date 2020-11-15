@@ -25,6 +25,7 @@ namespace lb2
             this.univname = univname;
             this.teachers = teachers;
             this.assistant = assistant;
+            //comboBox1.Items.AddRange(new string[] { "ХНУРЭ", "ХПИ", "ХАИ", "ХНПУ" });
         }
 
         public University(University nameuniversity)
