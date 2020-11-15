@@ -40,12 +40,18 @@ namespace lb2
 
         public void addstud ()
         {
-            students++;
+            if (students > 0 && students / teachers < 10)
+            {
+                students++;
+            }
         }
-
+ 
         public void deletestud ()
         {
-            students--;
+            if (students>0 && students/teachers<=10)
+            {
+                students--;
+            }
         }
 
         public void addlab ()
@@ -55,16 +61,25 @@ namespace lb2
 
         public void deletelab ()
         {
-            laboratory--;
+            if (laboratory > 0)
+            {
+                laboratory--;
+            }
         }
 
         public void addroom ()
         {
-            rooms++;
+            if (rooms > 0 && rooms / assistant < 2)
+            {
+                rooms++;
+            }
         }
         public void deleteroom ()
         {
-            rooms--;
+            if (rooms > 0 && rooms/assistant<=2)
+            {
+                rooms--;
+            }
         }
 
         public void addteach ()
@@ -74,7 +89,10 @@ namespace lb2
 
         public void deleteteach ()
         {
-            teachers--;
+            if (teachers>0 && students / teachers < 10)
+            {
+                teachers--;
+            }
         }
 
         public void addassis ()
@@ -83,8 +101,12 @@ namespace lb2
         }
         public void deleteassis ()
         {
-            assistant--;
+            if (assistant>0 && rooms / assistant < 2)
+            {
+                assistant--;
+            }
         }
+
     }
 
         

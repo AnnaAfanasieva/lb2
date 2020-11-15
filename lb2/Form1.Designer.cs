@@ -54,6 +54,7 @@
             this.deleteteacher = new System.Windows.Forms.Button();
             this.addassistant = new System.Windows.Forms.Button();
             this.deleteassistant = new System.Windows.Forms.Button();
+            this.Info = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -64,6 +65,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "Объединить университеты";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -301,11 +303,22 @@
             this.deleteassistant.UseVisualStyleBackColor = true;
             this.deleteassistant.Click += new System.EventHandler(this.deleteassistant_Click);
             // 
+            // Info
+            // 
+            this.Info.Location = new System.Drawing.Point(699, 397);
+            this.Info.Name = "Info";
+            this.Info.Size = new System.Drawing.Size(49, 23);
+            this.Info.TabIndex = 26;
+            this.Info.Text = "Info";
+            this.Info.UseVisualStyleBackColor = true;
+            this.Info.Click += new System.EventHandler(this.Info_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Info);
             this.Controls.Add(this.deleteassistant);
             this.Controls.Add(this.addassistant);
             this.Controls.Add(this.deleteteacher);
@@ -367,6 +380,7 @@
         private System.Windows.Forms.Button deleteteacher;
         private System.Windows.Forms.Button addassistant;
         private System.Windows.Forms.Button deleteassistant;
+        private System.Windows.Forms.Button Info;
     }
 }
 

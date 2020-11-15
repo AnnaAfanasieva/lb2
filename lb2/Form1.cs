@@ -19,11 +19,11 @@ namespace lb2
             InitializeComponent();
             universities = new List<University>();
 
-            universities.Add(new University(3, 8, 100, 12, "ХНУРЭ", 9, 7));
+            universities.Add(new University(3, 8, 100, 12, "ХНУРЭ", 10, 7));
 
-            universities.Add(new University(3, 8, 100, 12, "ХПИ", 9, 7));
+            universities.Add(new University(3, 8, 100, 12, "ХПИ", 10, 7));
 
-            University khai = new University(new University(3, 8, 100, 12, "ХАИ", 9, 7));
+            University khai = new University(new University(3, 8, 100, 12, "ХАИ", 10, 7));
             universities.Add(khai);
 
             University khnpu = new University(khai);
@@ -42,9 +42,10 @@ namespace lb2
             {
                 comboBox1.Items.Add(univ.univname);
             }
+            comboBox1.SelectedIndex = 0;
         }
 
-       
+
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -74,8 +75,8 @@ namespace lb2
 
         private void addstudent_Click(object sender, EventArgs e)
         {
-            universities[comboBox1.SelectedIndex].addstud();
-            label10.Text = universities[comboBox1.SelectedIndex].students.ToString();
+                universities[comboBox1.SelectedIndex].addstud();
+                label10.Text = universities[comboBox1.SelectedIndex].students.ToString();
         }
 
         private void deletestudent_Click(object sender, EventArgs e)
@@ -118,6 +119,19 @@ namespace lb2
         {
             universities[comboBox1.SelectedIndex].deleteassis();
             label14.Text = universities[comboBox1.SelectedIndex].assistant.ToString();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //universities[1] += universities[2];
+            //universities.Remove(universities[2]);
+            //initCombo();
+        }
+
+        private void Info_Click(object sender, EventArgs e)
+        {
+            
+            MessageBox.Show("Если вы пытаетесь изменить поле *Количество студентов*, но у вас не получается, то увеличте поле *Количество преподавателей* или наоборот, также работает с полями *Количество аудиторий* и *Количество персонала*, так как они взаимозависимы. Также любое число не может быть отрицательным!", "Важная информация");
         }
     }
 }
