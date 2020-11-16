@@ -106,11 +106,49 @@ namespace lb2
                 assistant--;
             }
         }
+
+
         public static University operator +(University firstuniv, University seconduniv)
         {
             University result = new University(firstuniv.faculty + seconduniv.faculty, firstuniv.laboratory + seconduniv.laboratory, firstuniv.students+seconduniv.students, firstuniv.rooms+seconduniv.rooms, firstuniv.univname+'+'+seconduniv.univname, firstuniv.teachers+seconduniv.teachers, firstuniv.assistant+seconduniv.assistant);
             return result;
         }
+
+        public int this[int index]
+        {
+            get
+            {
+                if (index == 1)
+                {
+                    return laboratory;
+                }
+                else if (index == 2)
+                {
+                    return rooms;
+                }
+                else
+                {
+                    return -1;
+                }
+            }
+            set
+            {
+                if (index == 1)
+                {
+                    laboratory = value;
+                }
+                else if (index == 2)
+                {
+                    rooms = value;
+                }
+                else
+                {
+
+                }
+            }
+        }
+
+
     }
 
         
