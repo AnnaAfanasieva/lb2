@@ -148,6 +148,39 @@ namespace lb2
             }
         }
 
+        class UniversityEqualityComparer : IEqualityComparer<University>
+        {
+
+            bool IEqualityComparer<University>.Equals(University firstun, University secondun)
+            {
+                bool equals = firstun.faculty == secondun.faculty &&
+                    firstun.laboratory == secondun.laboratory && firstun.students == secondun.students && firstun.rooms == secondun.rooms
+                    && firstun.univname.Equals(secondun.univname) && firstun.teachers == secondun.teachers && firstun.assistant == secondun.assistant;
+
+                if (firstun == null && secondun == null)
+                    return true;
+                else if (firstun == null || secondun == null)
+                    return false;
+                else if (equals)
+                    return true;
+                else
+                    return false;
+            }
+
+            int IEqualityComparer<University>.GetHashCode(University obj)
+            {
+                int hashCode = 1297206626;
+                hashCode = hashCode * -1521134295 + obj.faculty.GetHashCode();
+                hashCode = hashCode * -1521134295 + obj.laboratory.GetHashCode();
+                hashCode = hashCode * -1521134295 + obj.students.GetHashCode();
+                hashCode = hashCode * -1521134295 + obj.rooms.GetHashCode();
+                hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(obj.univname);
+                hashCode = hashCode * -1521134295 + obj.teachers.GetHashCode();
+                hashCode = hashCode * -1521134295 + obj.assistant.GetHashCode();
+                return hashCode;
+            }
+        }
+
 
     }
 
